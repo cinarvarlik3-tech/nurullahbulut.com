@@ -36,8 +36,8 @@ export function ContactCard({
     >
       <div className="flex flex-col justify-between lg:col-span-2">
         <div className="relative flex h-full min-h-0 flex-col gap-4 px-4 pt-8 pb-5 md:px-8 md:pt-8 md:pb-5">
-          <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl shrink-0">{title}</h1>
-          <p className="text-muted-foreground max-w-xl shrink-0 text-sm md:text-base lg:text-lg">{description}</p>
+          <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl shrink-0 max-md:text-center">{title}</h1>
+          <p className="text-muted-foreground max-w-xl shrink-0 text-sm md:text-base lg:text-lg max-md:text-center">{description}</p>
           <div className="grid shrink-0 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
             {contactInfo?.map((info, index) => (
               <ContactInfo key={index} {...info} />

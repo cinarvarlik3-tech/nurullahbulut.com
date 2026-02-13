@@ -262,7 +262,7 @@ export default function RandevuContactStep({
 
   const formContent = (
     <ContactCard
-      title="İletişim bilgileriniz"
+      title="İletişim Bilgileriniz"
       description="Randevunuzu tamamlamak için aşağıdaki bilgileri doldurun. En kısa sürede size dönüş yapacağız."
       contactInfo={getContactInfo()}
       appointmentSummary={appointmentSummaryNode}

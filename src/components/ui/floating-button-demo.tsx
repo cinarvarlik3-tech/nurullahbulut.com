@@ -89,9 +89,9 @@ function FloatingButtonExample() {
         <button
           type="button"
           aria-label="Sosyal medya ve iletişim menüsünü aç"
-          className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors z-10"
+          className="flex items-center justify-center h-12 w-12 max-md:h-[58px] max-md:w-[58px] rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors z-10"
         >
-          <Phone className="h-6 w-6" />
+          <Phone className="h-6 w-6 max-md:h-7 max-md:w-7" />
         </button>
       }>
       {items.map((item) => (

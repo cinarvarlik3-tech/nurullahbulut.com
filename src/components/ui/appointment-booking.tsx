@@ -53,11 +53,11 @@ export default function AppointmentBooking({ onContinue }: AppointmentBookingPro
 
   return (
     <Card className="gap-0 p-0">
-      <CardHeader className="flex h-max justify-center border-b !p-4">
-        <CardTitle>Randevunuzu planlayın</CardTitle>
+      <CardHeader className="flex h-max justify-center border-b !p-4 max-md:text-center">
+        <CardTitle className="max-md:block max-md:w-full">Randevunuzu Planlayın</CardTitle>
       </CardHeader>
       <CardContent className="relative p-0 md:pr-48">
-        <div className="p-6">
+        <div className="p-6 max-md:flex max-md:justify-center">
           <Calendar
             mode="single"
             selected={date}

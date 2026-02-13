@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import DeviceSwitch from "@/components/shared/DeviceSwitch";
+import MobileHeader from "@/components/mobile/MobileHeader";
 import { Header1 } from "@/components/ui/header";
 import SiteFooter from "@/components/SiteFooter";
 import { FloatingButtonExample } from "@/components/ui/floating-button-demo";
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${geist.variable} antialiased bg-background text-foreground`}>
-        <Header1 />
+        <DeviceSwitch desktop={<Header1 />} mobile={<MobileHeader />} />
         <main className="pt-16">{children}</main>
         <SiteFooter />
         <FloatingButtonExample />
