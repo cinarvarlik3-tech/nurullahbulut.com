@@ -1,5 +1,6 @@
 'use client';
 
+import type { RefObject } from 'react';
 import { ReactNode, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useOnClickOutside } from 'usehooks-ts';
@@ -46,7 +47,7 @@ function FloatingButton({ className, children, triggerContent }: FloatingButtonP
   const ref = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  useOnClickOutside(ref, () => setIsOpen(false));
+  useOnClickOutside(ref as RefObject<HTMLElement>, () => setIsOpen(false));
 
   return (
     <div className={cn('flex flex-col items-center relative', className)}>

@@ -4,7 +4,7 @@ export const DOCTOR_NAME = ""; // Update with doctor's name
 export const CLINIC_PHONE = ""; // Update with phone number
 export const CLINIC_EMAIL = ""; // Update with contact email (optional)
 export const CLINIC_ADDRESS = ""; // Update with address
-export const WHATSAPP_NUMBER = ""; // Update with WhatsApp number (e.g. "905XXXXXXXXX")
+export const WHATSAPP_NUMBER: string = ""; // Update with WhatsApp number (e.g. "905XXXXXXXXX")
 export const INSTAGRAM_URL = "https://www.instagram.com/dr.nurullahbulut/";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/doç-dr-nurullah-bulut-337796395/";
 
