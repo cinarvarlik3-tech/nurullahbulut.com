@@ -1,26 +1,76 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Tailwind v4 theme tokens — Color Hunt palette
+   Primary: White (background)
+   Secondary: Navy Blue (headers, main components)
+   Supporting: Teal (secondary components)
+   CTA: Bright Teal (buttons)
+*/
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@theme {
+  /* Palette */
+  --color-white: #ffffff;
+  --color-navy: #071952;
+  --color-teal: #088395;
+  --color-bright-teal: #37b7c3;
+
+  /* Semantic — primary = background/body */
+  --color-background: #ffffff;
+  --color-foreground: #071952;
+  --color-primary: #37b7c3;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #071952;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f0f9fa;
+  --color-muted-foreground: #088395;
+  --color-accent: #088395;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #37b7c3;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #071952;
+  --color-card: #ffffff;
+  --color-card-foreground: #071952;
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #071952;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  *, *::before, *::after {
+    border-color: var(--color-border);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
