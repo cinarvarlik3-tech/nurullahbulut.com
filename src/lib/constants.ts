@@ -87,7 +87,7 @@ export const PILLAR_SECTIONS = [
     clusters: [
       { title: "Ekran Göz Yorgunluğu", slug: "ekran-goz-yorgunlugu" },
       { title: "Göz Kuruluğu Nasıl Geçer", slug: "goz-kurulugu-nasil-gecer" },
-      { title: "Mavi Işık Zararlı mı?", slug: "mavi-isik-zararli-mi" },
+      { title: "Mavi Işık Zararlı MI?", slug: "mavi-isik-zararli-mi" },
     ],
   },
 ];

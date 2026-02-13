@@ -11,6 +11,9 @@ import {
   WHATSAPP_NUMBER,
 } from "@/lib/constants";
 
+/** Web App URL from Google Apps Script deployment. Set in .env.local as NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL. */
+const GOOGLE_WEB_APP_URL = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL;
+
 /** Validates international phone: 10–15 digits (after stripping spaces/dashes/etc.). */
 function isValidPhone(value: string): boolean {
   const digits = value.replace(/\D/g, "");
@@ -24,6 +27,8 @@ export interface ContactSectionProps {
 export default function ContactSection({ className }: ContactSectionProps) {
   const [phone, setPhone] = useState("");
   const [phoneError, setPhoneError] = useState<string | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const waLink = WHATSAPP_NUMBER
     ? `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba,%20online%20danışma%20almak%20istiyorum.`
     : null;
@@ -151,14 +156,44 @@ export default function ContactSection({ className }: ContactSectionProps) {
           </div>
           <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 if (phone && !isValidPhone(phone)) {
                   setPhoneError("Geçerli bir telefon numarası girin (en az 10, en fazla 15 rakam).");
                   return;
                 }
                 setPhoneError(null);
-                // TODO: submit form
+                setSubmitError(null);
+                if (!GOOGLE_WEB_APP_URL) {
+                  setSubmitStatus("error");
+                  setSubmitError("Form bağlantısı yapılandırılmamış. Lütfen daha sonra tekrar deneyin veya WhatsApp ile ulaşın.");
+                  return;
+                }
+                setSubmitStatus("sending");
+                const form = e.currentTarget;
+                const name = (form.elements.namedItem("contact-name") as HTMLInputElement)?.value ?? "";
+                const subject = (form.elements.namedItem("contact-subject") as HTMLInputElement)?.value ?? "";
+                const message = (form.elements.namedItem("contact-message") as HTMLTextAreaElement)?.value ?? "";
+                try {
+                  await fetch(GOOGLE_WEB_APP_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name,
+                      phone: phone.trim(),
+                      subject,
+                      message,
+                      timestamp: new Date().toISOString(),
+                    }),
+                  });
+                  setSubmitStatus("success");
+                  form.reset();
+                  setPhone("");
+                } catch (err) {
+                  setSubmitStatus("error");
+                  setSubmitError(err instanceof Error ? err.message : "Mesajınız gönderilemedi. Lütfen tekrar deneyin veya WhatsApp ile ulaşın.");
+                }
               }}
               className="space-y-5"
             >
@@ -247,10 +282,29 @@ export default function ContactSection({ className }: ContactSectionProps) {
                   className="w-full mt-2 px-3 py-2 resize-none bg-background outline-none border border-input rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors text-foreground placeholder:text-muted-foreground"
                 />
               </div>
-              <Button type="submit" className="w-full" size="lg">
-                <Send className="w-4 h-4 mr-2" />
-                Gönder
+              <Button
+                type="submit"
+                className="w-full"
+                size="lg"
+                disabled={submitStatus === "sending"}
+              >
+                {submitStatus === "sending" ? (
+                  "Gönderiliyor..."
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Gönder
+                  </>
+                )}
               </Button>
+              {submitStatus === "success" && (
+                <p className="text-sm text-green-600 dark:text-green-400">
+                  Mesajınız alındı. En kısa sürede size dönüş yapacağız.
+                </p>
+              )}
+              {submitStatus === "error" && submitError && (
+                <p className="text-sm text-destructive">{submitError}</p>
+              )}
             </form>
           </div>
         </div>
