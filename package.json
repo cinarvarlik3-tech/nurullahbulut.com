@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -31,6 +31,7 @@
     "react-day-picker": "^9.13.2",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "schema-dts": "^1.1.5",
     "tailwind-merge": "^3.4.0",
     "twilio": "^5.12.1",

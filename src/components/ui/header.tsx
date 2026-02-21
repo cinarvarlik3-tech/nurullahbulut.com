@@ -52,11 +52,11 @@ function Header1() {
       ],
     },
     {
-      title: "Hakkımızda",
-      description: "Doktor profilimiz ve hasta deneyimleri hakkında bilgi alın.",
+      title: "Hakkımda",
+      description: "Doktorumuz ve hasta deneyimleri hakkında bilgi alın.",
       items: [
         {
-          title: "Doktor Profili",
+          title: "Hakkında",
           href: "/doktor-profili",
         },
       ],

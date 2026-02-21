@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner";
 
 const PILLAR_SLUG = "lazer-goz-tedavileri";
 
-/** Procedure card images: cluster slug -> public image path */
+/** Procedure card images: cluster slug -> public image path (placeholder URL used until real image is added) */
 const LAZER_CLUSTER_IMAGES: Record<string, string> = {
   "lasik-nedir": "/images/procedures/lasik-goz-ameliyati.jpg",
   "riskler": "/images/procedures/lazer-ameliyati-riskleri-nelerdir.jpg",
@@ -15,18 +15,29 @@ const LAZER_CLUSTER_IMAGES: Record<string, string> = {
   "prk-nedir": "/images/procedures/PRK-nedir.jpg",
   "iyilesme-sureci": "/images/procedures/Lazer-goz-ameliyati-sonrasi-nelere-dikkat-edilmelidir.jpg",
   "no-touch-lazer-nedir": "/images/procedures/no-touch-lazer-nedir.jpg",
+  "smile-pro": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900&auto=format&fit=crop&q=80",
 };
 
 export const metadata = buildMetadata({
   title: "Lazer Göz Ameliyatı",
   description:
-    "LASIK, PRK ve No Touch Lazer yöntemleri hakkında kapsamlı bilgi. Lazer göz ameliyatı riskleri, iyileşme süreci ve fiyatları.",
+    "LASIK, PRK ve No Touch Lazer yöntemleri hakkında kapsamlı bilgi. Lazer göz ameliyatı riskleri ve iyileşme süreci.",
   path: `/${PILLAR_SLUG}`,
 });
 
+/** Swap SMILE Pro and İyileşme Süreci card positions. */
+function swapClusterPositions<T>(arr: T[], slugA: string, slugB: string, getSlug: (x: T) => string): T[] {
+  const copy = [...arr];
+  const i = copy.findIndex((x) => getSlug(x) === slugA);
+  const j = copy.findIndex((x) => getSlug(x) === slugB);
+  if (i !== -1 && j !== -1) [copy[i], copy[j]] = [copy[j], copy[i]];
+  return copy;
+}
+
 export default function LazerGozTedavileriPage() {
   const { frontmatter } = getPillar(PILLAR_SLUG);
-  const clusters = getClustersForPillar(PILLAR_SLUG).filter((c) => c.slug !== "fiyatlar");
+  const rawClusters = getClustersForPillar(PILLAR_SLUG).filter((c) => c.slug !== "fiyatlar");
+  const clusters = swapClusterPositions(rawClusters, "smile-pro", "iyilesme-sureci", (c) => c.slug);
   const breadcrumb = buildBreadcrumbSchema([
     { name: "Ana Sayfa", url: "/" },
     { name: frontmatter.title, url: `/${PILLAR_SLUG}` },

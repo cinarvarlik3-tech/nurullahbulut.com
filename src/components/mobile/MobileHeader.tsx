@@ -126,7 +126,7 @@ export default function MobileHeader() {
           className="flex justify-between items-center py-3 px-2 rounded-lg hover:bg-muted/50 text-card-foreground font-medium"
           onClick={closeDrawer}
         >
-          Doktor Profili
+          Hakkında
           <MoveRight className="w-4 h-4 text-muted-foreground" />
         </Link>
         <Link

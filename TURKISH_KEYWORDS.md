@@ -255,9 +255,9 @@ Bu belge, web sitede **şu an hedeflenen** ve **mantıken hedeflenebilecek** Tü
 
 ---
 
-## 6. Doktor Profili & Randevu
+## 6. Hakkında & Randevu
 
-- doktor profili
+- Hakkında
 - göz hastalıkları uzmanı İstanbul
 - retina uzmanı
 - katarakt cerrahisi uzmanı

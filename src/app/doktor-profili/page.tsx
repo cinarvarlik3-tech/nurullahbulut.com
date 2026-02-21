@@ -5,7 +5,7 @@ import CTABanner from "@/components/CTABanner";
 import DoctorProfileAccordion from "@/components/ui/doctor-profile-accordion";
 
 export const metadata = buildMetadata({
-  title: "Doktor Profili",
+  title: "Hakkında",
   description:
     "Doç. Dr. Nurullah Bulut — göz hastalıkları ve cerrahisi uzmanı. Retina, katarakt, lazer göz tedavileri ve göz travmaları alanında deneyim.",
   path: "/doktor-profili",
@@ -24,7 +24,7 @@ export default function DoktorProfilPage() {
         <Breadcrumbs
           items={[
             { label: "Ana Sayfa", href: "/" },
-            { label: "Doktor Profili" },
+            { label: "Hakkında" },
           ]}
         />
 

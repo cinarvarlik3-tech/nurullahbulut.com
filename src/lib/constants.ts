@@ -14,7 +14,7 @@ export const NAV_ITEMS = [
   { label: "Katarakt ve Akıllı Lens", href: "/katarakt-akilli-lens" },
   { label: "Göz Hastalıkları", href: "/goz-hastaliklari-ve-belirtileri" },
   { label: "Göz Sağlığı", href: "/goz-sagligi-ve-koruma" },
-  { label: "Doktor Profili", href: "/doktor-profili" },
+  { label: "Hakkında", href: "/doktor-profili" },
   { label: "Online Danışma", href: "/online-danisma" },
 ];
 

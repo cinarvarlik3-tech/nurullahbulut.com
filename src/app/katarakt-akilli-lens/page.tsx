@@ -10,7 +10,7 @@ const PILLAR_SLUG = "katarakt-akilli-lens";
 /** Procedure card images: cluster slug -> public image path */
 const KATARAKT_CLUSTER_IMAGES: Record<string, string> = {
   "katarakt-belirtileri": "/images/procedures/katarakt-belirti.jpg",
-  "akilli-lens-kimlere-yapilir": "/images/procedures/akilli-lens-kimlere-yapilir.jpg",
+  "akilli-lens-kimlere-yapilir": "/images/procedures/goz-ici-lens.jpg",
   "akilli-lens-nedir": "/images/procedures/akilli-lens-nedir.jpg",
   "akilli-lens-riskleri": "/images/procedures/akilli-lens-riskleri-nelerdir.jpg",
   "katarakt-ameliyati-nasil-yapilir": "/images/procedures/goz-tansiyonu-ve-katarakt-ameliyati.jpg",

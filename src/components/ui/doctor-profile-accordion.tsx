@@ -15,23 +15,16 @@ const doctorProfileSections = [
     content: (
       <div className="space-y-5 text-foreground/90 text-lg">
         <p>
-          Doç. Dr. Nurullah Bulut,{' '}
-          <strong>2008 yılında Atatürk Üniversitesi Tıp Fakültesi&apos;nden mezun olmuştur</strong>. Tıp eğitimini tamamladıktan sonra göz hastalıkları alanında uzmanlık eğitimini alarak{' '}
-          <strong>göz hastalıkları uzmanı</strong> unvanını kazanmıştır.
+          Doç. Dr. Nurullah Bulut, 2008 yılında Atatürk Üniversitesi Tıp Fakültesi&apos;nden mezun olmuştur. Mezuniyetinin ardından uzmanlık eğitimini Kartal Dr. Lütfi Kırdar Şehir Hastanesi Göz Kliniği&apos;nde tamamlamış ve 2013 yılına kadar bu kurumda görev yapmıştır. Bu süreçte özellikle retina hastalıkları, katarakt cerrahisi ve göz travmaları alanlarında yoğun klinik deneyim kazanmış; ileri düzey cerrahi uygulamalar konusunda uzmanlaşmıştır.
         </p>
         <p>
-          <strong>2013 yılına kadar Kartal Eğitim ve Araştırma Hastanesi&apos;nde</strong> uzman doktor olarak görev yapmış; bu süreçte özellikle{' '}
-          <strong>retina hastalıkları</strong>, <strong>katarakt cerrahisi</strong> ve{' '}
-          <strong>göz travmaları</strong> üzerine yoğun klinik deneyim edinmiştir.
+          2017 yılında Sağlık Bilimleri Üniversitesi&apos;nde akademik kariyerine başlamış, yardımcı doçent olarak görev almıştır. Akademik çalışmalarını sürdürürken aynı zamanda modern göz cerrahisi teknikleri üzerine klinik pratiğini geliştirmiş; retina ve katarakt alanındaki uzmanlığını hem akademik hem de cerrahi düzeyde derinleştirmiştir.
         </p>
         <p>
-          <strong>2017 yılında Sağlık Bilimleri Üniversitesi&apos;nde akademik kariyerine başlamış</strong>, yardımcı doçent (assistant professor) olarak görev almıştır. Akademik çalışmalarını sürdürürken aynı zamanda ileri düzey cerrahi uygulamalarda aktif rol almıştır.
+          2022 yılından itibaren Sağlık Bilimleri Üniversitesi&apos;nde Doçent Doktor unvanıyla görevini sürdürmektedir.
         </p>
         <p>
-          <strong>2022 yılından bu yana Sağlık Bilimleri Üniversitesi&apos;nde Doçent Doktor (Associate Professor) unvanı ile görev yapmaktadır.</strong>
-        </p>
-        <p>
-          <strong>2023 yılından itibaren Memorial Göztepe Hastanesi Göz Hastalıkları Bölümü&apos;nü yönetmekte</strong>, klinik ve cerrahi uygulamalarını burada sürdürmektedir.
+          2023–2025 yılları arasında Memorial Bahçelievler Hastanesi&apos;nde doçent doktor olarak görev yapmış olup, 2025 yılı itibarıyla Memorial Göztepe Hastanesi&apos;nde hastalarına hizmet vermektedir. Retina hastalıkları tanı ve tedavisi, katarakt cerrahisi ve göz travmaları başta olmak üzere kapsamlı göz sağlığı hizmetleri sunmaktadır.
         </p>
       </div>
     ),

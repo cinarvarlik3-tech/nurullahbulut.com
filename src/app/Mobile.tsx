@@ -37,7 +37,7 @@ export default function HomeMobile() {
           </h1>
           <p className="text-lg text-black max-w-lg mb-6">
             Lazer göz ameliyatı, katarakt tedavisi, akıllı lens uygulamaları ve
-            göz hastalıklarında deneyimli kadromuzla yanınızdayız.
+            göz hastalıklarında yanınızdayız.
           </p>
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             {["Retina Cerrahisi", "Lazer Ameliyatı", "Katarakt", "LASIK"].map((label) => (
