@@ -15,7 +15,7 @@ const LAZER_CLUSTER_IMAGES: Record<string, string> = {
   "prk-nedir": "/images/procedures/PRK-nedir.jpg",
   "iyilesme-sureci": "/images/procedures/Lazer-goz-ameliyati-sonrasi-nelere-dikkat-edilmelidir.jpg",
   "no-touch-lazer-nedir": "/images/procedures/no-touch-lazer-nedir.jpg",
-  "smile-pro": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900&auto=format&fit=crop&q=80",
+  "smile-pro": "/images/procedures/smile-pro-laser-1-1.jpg",
 };
 
 export const metadata = buildMetadata({
