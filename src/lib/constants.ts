@@ -55,7 +55,7 @@ export const PILLAR_SECTIONS = [
     pillarHref: "/lazer-goz-tedavileri",
     pillarSlug: "lazer-goz-tedavileri",
     clusters: [
-      { title: "No Touch Lazer Nedir", slug: "no-touch-lazer-nedir" },
+      { title: "SMILE Pro Nedir", slug: "smile-pro" },
       { title: "LASIK Nedir", slug: "lasik-nedir" },
       { title: "PRK Nedir", slug: "prk-nedir" },
     ],

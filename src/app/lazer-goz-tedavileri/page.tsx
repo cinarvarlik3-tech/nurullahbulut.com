@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner";
 
 const PILLAR_SLUG = "lazer-goz-tedavileri";
 
-/** Procedure card images: cluster slug -> public image path (placeholder URL used until real image is added) */
+/** Procedure card images: cluster slug -> public image path (relative so localhost and production both work) */
 const LAZER_CLUSTER_IMAGES: Record<string, string> = {
   "lasik-nedir": "/images/procedures/lasik-goz-ameliyati.jpg",
   "riskler": "/images/procedures/lazer-ameliyati-riskleri-nelerdir.jpg",

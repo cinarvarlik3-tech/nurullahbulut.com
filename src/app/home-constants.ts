@@ -16,7 +16,7 @@ const CLUSTER_CARD_IMAGES = [
 ];
 
 export const LAZER_HOME_IMAGES: Record<string, string> = {
-  "no-touch-lazer-nedir": "/images/procedures/no-touch-lazer-nedir.jpg",
+  "smile-pro": "/images/procedures/smile-pro-laser-1-1.jpg",
   "lasik-nedir": "/images/procedures/lasik-goz-ameliyati.jpg",
   "prk-nedir": "/images/procedures/PRK-nedir.jpg",
 };
