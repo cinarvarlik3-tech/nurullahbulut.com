@@ -1,5 +1,5 @@
 export const SITE_NAME = "Doç. Dr. Nurullah Bulut";
-export const SITE_URL = "https://example.com"; // Update with real domain
+export const SITE_URL = "https://nurullahbulut-com-4sp1-mc92lpth8-cinarvarlik3-techs-projects.vercel.app";
 export const DOCTOR_NAME = ""; // Update with doctor's name
 export const CLINIC_PHONE = ""; // Update with phone number
 export const CLINIC_EMAIL = ""; // Update with contact email (optional)
