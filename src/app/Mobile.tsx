@@ -10,7 +10,7 @@ import {
 export default function HomeMobile() {
   return (
     <>
-      {/* Hero — image + centered text (including "Göz Hastalıkları ve Cerrahisi Uzmanı") */}
+      {/* Hero — image first, then text */}
       <section className="bg-background border-b border-border overflow-hidden min-h-[85vh] flex flex-col items-center justify-center px-4 py-10 gap-8">
         {/* Doctor image */}
         <div className="relative aspect-square w-full max-w-[18rem] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">

@@ -122,6 +122,14 @@ export default function MobileHeader() {
         })}
 
         <Link
+          href="/iletisim"
+          className="flex justify-between items-center py-3 px-2 rounded-lg hover:bg-muted/50 text-card-foreground font-medium"
+          onClick={closeDrawer}
+        >
+          İletişim
+          <MoveRight className="w-4 h-4 text-muted-foreground" />
+        </Link>
+        <Link
           href="/doktor-profili"
           className="flex justify-between items-center py-3 px-2 rounded-lg hover:bg-muted/50 text-card-foreground font-medium"
           onClick={closeDrawer}

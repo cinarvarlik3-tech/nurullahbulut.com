@@ -6,6 +6,7 @@ import MobileHeader from "@/components/mobile/MobileHeader";
 import { Header1 } from "@/components/ui/header";
 import SiteFooter from "@/components/SiteFooter";
 import { FloatingButtonExample } from "@/components/ui/floating-button-demo";
+import PageTransition from "@/components/shared/PageTransition";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 const geist = Geist({
@@ -31,8 +32,10 @@ export default function RootLayout({
     <html lang="tr">
       <body className={`${geist.variable} antialiased bg-background text-foreground`}>
         <DeviceSwitch desktop={<Header1 />} mobile={<MobileHeader />} />
-        <main className="pt-16">{children}</main>
-        <SiteFooter />
+        <PageTransition>
+          <main className="pt-16">{children}</main>
+          <SiteFooter />
+        </PageTransition>
         <FloatingButtonExample />
       </body>
     </html>

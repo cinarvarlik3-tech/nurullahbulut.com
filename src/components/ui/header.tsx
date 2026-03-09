@@ -56,6 +56,10 @@ function Header1() {
       description: "Doktorumuz ve hasta deneyimleri hakkında bilgi alın.",
       items: [
         {
+          title: "İletişim",
+          href: "/iletisim",
+        },
+        {
           title: "Hakkında",
           href: "/doktor-profili",
         },
