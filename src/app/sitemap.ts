@@ -11,7 +11,7 @@ const pillars = [
   "goz-sagligi-ve-koruma",
 ];
 
-const helpers = ["doktor-profili", "online-danisma", "randevu-al"];
+const helpers = ["doktor-profili", "randevu-al"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [

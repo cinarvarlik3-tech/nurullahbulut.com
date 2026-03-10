@@ -175,16 +175,10 @@ function Header1() {
           </NavigationMenu>
         </div>
 
-        {/* CTA buttons — right column */}
-        <div className="flex justify-end w-full gap-3">
-          <Link href="/online-danisma" className="hidden md:inline-flex">
-            <Button variant="ghost" className="bg-accent text-white hover:bg-accent/90 hover:text-white">
-              Online Danışma
-            </Button>
-          </Link>
-          <div className="border-r border-white/20 hidden md:inline-block self-stretch my-2"></div>
+        {/* CTA — right column */}
+        <div className="flex justify-end w-full">
           <Link href="/randevu-al">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
               Randevu Al
             </Button>
           </Link>

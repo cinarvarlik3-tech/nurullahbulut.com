@@ -37,7 +37,7 @@ export default function SiteFooter() {
           <p className="text-secondary-foreground font-semibold mb-3">Hızlı Bağlantılar</p>
           <ul className="space-y-2">
             <li><Link href="/doktor-profili" className="text-sm hover:text-secondary-foreground">Hakkında</Link></li>
-            <li><Link href="/online-danisma" className="text-sm hover:text-secondary-foreground">Online Danışma</Link></li>
+            <li><Link href="/iletisim" className="text-sm hover:text-secondary-foreground">İletişim</Link></li>
           </ul>
         </div>
       </div>

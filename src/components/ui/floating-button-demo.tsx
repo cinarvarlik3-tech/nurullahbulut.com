@@ -2,7 +2,7 @@
 
 import { FloatingButton, FloatingButtonItem } from '@/components/ui/floating-button';
 import { cn } from '@/lib/utils';
-import { Camera, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Link from 'next/link';
 import {
   WHATSAPP_NUMBER,
@@ -72,12 +72,6 @@ const items = [
     label: 'LinkedIn',
     href: LINKEDIN_URL || '#',
     className: 'bg-[#0A66C2] hover:bg-[#004182] text-white'
-  },
-  {
-    icon: <Camera className="h-6 w-6" />,
-    label: 'Online Danışma',
-    href: '/online-danisma',
-    className: 'bg-accent hover:bg-accent/90 text-accent-foreground'
   }
 ];
 

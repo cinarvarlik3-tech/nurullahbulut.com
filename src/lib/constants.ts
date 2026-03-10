@@ -15,7 +15,6 @@ export const NAV_ITEMS = [
   { label: "Göz Hastalıkları", href: "/goz-hastaliklari-ve-belirtileri" },
   { label: "Göz Sağlığı", href: "/goz-sagligi-ve-koruma" },
   { label: "Hakkında", href: "/doktor-profili" },
-  { label: "Online Danışma", href: "/online-danisma" },
 ];
 
 export const PILLARS = [

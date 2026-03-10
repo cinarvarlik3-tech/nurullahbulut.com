@@ -50,19 +50,12 @@ export default function GozHastaliklariPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-[#071952] mt-4 mb-3">
           {frontmatter.title}
         </h1>
-        <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="mb-6">
           <Link
             href="/randevu-al"
-            className="inline-flex px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            className="inline-flex px-8 py-3.5 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
             Randevu Al
-          </Link>
-          <div className="border-r border-border self-stretch my-1" aria-hidden />
-          <Link
-            href="/online-danisma"
-            className="inline-flex px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors"
-          >
-            Online Danışma
           </Link>
         </div>
         <p className="text-lg text-muted-foreground mb-10 max-w-3xl">

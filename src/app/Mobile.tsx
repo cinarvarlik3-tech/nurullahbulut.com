@@ -49,18 +49,12 @@ export default function HomeMobile() {
               </span>
             ))}
           </div>
-          <div className="flex flex-row gap-3 w-full">
+          <div className="flex justify-center w-full px-2">
             <Link
               href="/randevu-al"
-              className="flex-1 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors text-base text-center"
+              className="inline-flex justify-center items-center w-full max-w-[320px] py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors text-base"
             >
               Randevu Al
-            </Link>
-            <Link
-              href="/online-danisma"
-              className="flex-1 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors text-base text-center"
-            >
-              Online Danışma
             </Link>
           </div>
         </div>

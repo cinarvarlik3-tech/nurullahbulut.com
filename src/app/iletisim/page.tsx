@@ -58,14 +58,9 @@ export default function IletisimPage() {
               <p className="text-base text-foreground mt-2 max-w-md">
                 <strong>Adres:</strong> Yeni Sahra, Karaman Cd No: 1, 34634 Ataşehir/İstanbul (Memorial Göztepe Hastanesi)
               </p>
-              <div className="flex w-full gap-3 mt-8">
-                <Link href="/online-danisma" className="flex-1 min-w-0">
-                  <Button variant="ghost" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-3">
-                    Online Danışma
-                  </Button>
-                </Link>
-                <Link href="/randevu-al" className="flex-1 min-w-0">
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3">
+              <div className="flex justify-center sm:justify-start mt-8">
+                <Link href="/randevu-al" className="inline-block min-w-[200px] text-center">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-8">
                     Randevu Al
                   </Button>
                 </Link>

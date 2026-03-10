@@ -138,17 +138,8 @@ export default function MobileHeader() {
           <MoveRight className="w-4 h-4 text-muted-foreground" />
         </Link>
         <Link
-          href="/online-danisma"
-          className="flex justify-between items-center py-3 px-2 rounded-lg hover:bg-muted/50 text-card-foreground font-medium"
-          onClick={closeDrawer}
-        >
-          Online Danışma
-          <MoveRight className="w-4 h-4 text-muted-foreground" />
-        </Link>
-
-        <Link
           href="/randevu-al"
-          className="block w-full text-center px-4 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors mt-4"
+          className="block w-full text-center px-6 py-3.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors mt-4"
           onClick={closeDrawer}
         >
           Randevu Al

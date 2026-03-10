@@ -51,18 +51,12 @@ export default function HomeDesktop() {
                 </span>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <Link
                 href="/randevu-al"
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex px-8 py-3.5 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors text-center"
               >
                 Randevu Al
-              </Link>
-              <Link
-                href="/online-danisma"
-                className="px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors"
-              >
-                Online Danışma
               </Link>
             </div>
           </div>

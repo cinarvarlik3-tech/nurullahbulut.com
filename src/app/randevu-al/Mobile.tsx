@@ -1,21 +1,12 @@
-import Breadcrumbs from "@/components/Breadcrumbs";
-import RandevuAlStepper from "@/components/randevu-al-stepper";
+import RandevuAlHeroBox from "@/components/randevu-al-hero-box";
+import RandevuAlCTABanner from "@/components/RandevuAlCTABanner";
 
 export default function RandevuAlMobile() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 flex flex-col items-center">
-      <div className="w-full max-w-lg">
-        <Breadcrumbs
-          items={[
-            { label: "Ana Sayfa", href: "/" },
-            { label: "Randevu Al" },
-          ]}
-        />
-      </div>
-
-      <div className="mt-6 w-full max-w-lg flex flex-col items-center">
-        <RandevuAlStepper />
-      </div>
+    <div className="w-full px-2 py-4 min-h-[calc(100vh-5rem)] flex flex-col gap-8">
+      <h1 className="text-4xl font-bold text-center text-foreground pt-6">Randevu Alın</h1>
+      <RandevuAlHeroBox />
+      <RandevuAlCTABanner />
     </div>
   );
 }
