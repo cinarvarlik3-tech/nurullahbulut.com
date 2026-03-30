@@ -10,9 +10,10 @@ import {
   LINKEDIN_URL
 } from '@/lib/constants';
 
-const whatsappUrl = WHATSAPP_NUMBER
-  ? `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`
-  : null;
+const CLINIC_PHONE_TR = '05350574224';
+const CLINIC_PHONE_E164 = '905350574224';
+
+const whatsappUrl = `https://wa.me/${(WHATSAPP_NUMBER || CLINIC_PHONE_E164).replace(/\D/g, '')}`;
 
 /* Platform logo SVGs (white fill for use on colored buttons) */
 function WhatsAppLogo({ className }: { className?: string }) {
@@ -58,7 +59,7 @@ const items = [
   {
     icon: <WhatsAppLogo />,
     label: 'WhatsApp',
-    href: whatsappUrl || '#',
+    href: whatsappUrl,
     className: 'bg-[#25d366] hover:bg-[#20bd5a] text-white'
   },
   {
@@ -72,6 +73,12 @@ const items = [
     label: 'LinkedIn',
     href: LINKEDIN_URL || '#',
     className: 'bg-[#0A66C2] hover:bg-[#004182] text-white'
+  },
+  {
+    icon: <Phone className="h-6 w-6" />,
+    label: 'Ara',
+    href: `tel:${CLINIC_PHONE_TR}`,
+    className: 'bg-[#071952] hover:bg-[#0A2A7A] text-white mb-1'
   }
 ];
 
