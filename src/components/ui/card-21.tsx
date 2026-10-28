@@ -39,7 +39,11 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
           <div
             className="absolute inset-0 bg-cover bg-center 
                        transition-transform duration-500 ease-in-out group-hover:scale-110"
-            style={{ backgroundImage: `url(${imageUrl})` }}
+            style={
+              imageUrl
+                ? { backgroundImage: `url(${imageUrl})` }
+                : { backgroundColor: "hsl(var(--theme-color))" }
+            }
           />
           <div
             className="absolute inset-0"
